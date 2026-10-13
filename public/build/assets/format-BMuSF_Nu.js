@@ -1,0 +1,1 @@
+const r=new Intl.DateTimeFormat("en",{year:"numeric",month:"long",day:"numeric"});function a(t){return t?r.format(new Date(t)):""}function o(t,e,n=`${e}s`){return`${t} ${t===1?e:n}`}export{a as f,o as p};

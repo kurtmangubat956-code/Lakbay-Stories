@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-cream-100 text-ink;
+    }
+
+    :focus-visible {
+        @apply outline-none ring-2 ring-forest-600 ring-offset-2 ring-offset-cream-100;
+    }
+}
+
+@layer components {
+    .container-page {
+        @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+    }
+
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-60;
+    }
+
+    .btn-primary {
+        @apply btn bg-forest-700 text-cream-50 hover:bg-forest-800;
+    }
+
+    .btn-secondary {
+        @apply btn border border-forest-700/30 bg-transparent text-forest-800 hover:bg-forest-50;
+    }
+
+    .btn-danger {
+        @apply btn bg-red-700 text-white hover:bg-red-800;
+    }
+
+    .btn-light {
+        @apply btn bg-cream-50 text-forest-900 hover:bg-white;
+    }
+
+    .field {
+        @apply block w-full rounded-lg border-cream-300 bg-white text-ink shadow-sm placeholder:text-ink/40 focus:border-forest-600 focus:ring-forest-600;
+    }
+
+    .eyebrow {
+        @apply text-xs font-semibold uppercase tracking-[0.2em] text-forest-600;
+    }
+}
